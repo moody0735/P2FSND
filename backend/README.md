@@ -73,41 +73,41 @@ The error codes currently returned are:
 
 ## Endpoints
 
-# GET /categories
+### GET /categories
 
 - Returns all the categories.
 for test : ```curl http://127.0.0.1:5000/categories```
 
 
-# GET /questions
+### GET /questions
 
 - Returns all questions.
 for test : ```curl http://127.0.0.1:5000/questions```
 
-# DELETE /questions/int:id\
+### DELETE /questions/int:id\
 
 - Deletes a question by id.
 for test : ```curl -X DELETE http://127.0.0.1:5000/questions/6 ```
 
-# POST /questions
+### POST /questions
 
 - Creates a new question.
 for test : ```curl -X POST -H "Content-Type: application/json" -d '{ "question": "Frankie Fredericks represented which African country in athletics?", "answer": "Namibia", "difficulty": 3, "category": "6" }' http://127.0.0.1:5000/questions```
 
 
-# POST /questions/search
+### POST /questions/search
 
 - returns questions that has the search substring.
 for test : ```curl -X POST -H "Content-Type: application/json" -d '{"searchTerm": "Africa"}' http://127.0.0.1:5000/questions/search  ```
 
 
-# GET /categories/int:id\/questions
+### GET /categories/int:id\/questions
 
 - Gets questions by category using the id.
 for test : ```curl http://127.0.0.1:5000/categories/1/questions ```
 
 
-# POST /quizzes
+### POST /quizzes
 
 - Takes the category and previous questions in the request.
 - Return random question not in previous questions.
